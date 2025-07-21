@@ -1,4 +1,4 @@
- TicketResell – Nền tảng bán lại vé chưa sử dụng
+🎫 TicketResell – Nền tảng bán lại vé chưa sử dụng
 
 I. Tổng quan dự án
 🎯 Mục tiêu
