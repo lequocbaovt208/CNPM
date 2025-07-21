@@ -1,5 +1,7 @@
 🎫 TicketResell – Nền tảng bán lại vé chưa sử dụng
 
+Code name: ticketresell-v1
+
 I. Tổng quan dự án
 🎯 Mục tiêu
 Xây dựng một nền tảng số cho phép người dùng đăng bán, tìm kiếm và mua lại các vé sự kiện chưa sử dụng một cách an toàn, tiện lợi và minh bạch.
