@@ -1,12 +1,12 @@
-🎫 TicketResell – Nền tảng bán lại vé chưa sử dụng
+# 🎫 TicketResell – Nền tảng bán lại vé chưa sử dụng
 
 
 
-I. Tổng quan dự án
-🎯 Mục tiêu
+# I. Tổng quan dự án
+# 🎯 Mục tiêu
 Xây dựng một nền tảng số cho phép người dùng đăng bán, tìm kiếm và mua lại các vé sự kiện chưa sử dụng một cách an toàn, tiện lợi và minh bạch.
 
-📌 Phạm vi
+# 📌 Phạm vi
 Hệ thống cho phép:
 
 Người dùng đăng bán vé chưa dùng (concert, thể thao, lễ hội,…)
@@ -17,7 +17,7 @@ Cung cấp xác thực, chat, thông báo và quản lý giao dịch
 
 Không tích hợp chuyển nhượng vé điện tử tự động (thực hiện bên ngoài)
 
-📎 Giả định và ràng buộc
+# 📎 Giả định và ràng buộc
 Không hỗ trợ in vé hay vận chuyển vật lý
 
 Không tích hợp hệ thống vé chính thức (ticketmaster, v.v.)
@@ -26,16 +26,16 @@ Không xử lý hoàn tiền, tranh chấp trực tiếp trên nền tảng
 
 Giao dịch thanh toán chỉ hỗ trợ một số cổng phổ biến (Momo, ZaloPay, ngân hàng)
 
-II. Yêu cầu chức năng
- Các tác nhân chính
+# II. Yêu cầu chức năng
+# 1.Các tác nhân chính
 Guest: Khách chưa đăng nhập
 
 User: Người dùng đã đăng ký (người bán hoặc người mua)
 
 Admin: Quản trị hệ thống
 
- Chức năng chính
-Guest
+# 2.Chức năng chính
+-Guest
 Tìm kiếm vé: Theo từ khóa, sự kiện, địa điểm, ngày, giá
 
 Xem chi tiết vé: Tên sự kiện, ngày giờ, vị trí ngồi, ảnh vé
@@ -44,7 +44,7 @@ Xem chi tiết vé: Tên sự kiện, ngày giờ, vị trí ngồi, ảnh vé
 
 Đăng nhập: Truy cập hệ thống
 
-User
+-User
 Xác thực tài khoản: Qua email, số điện thoại, mạng xã hội
 
 Đăng bán vé: Nhập thông tin vé, ảnh, giá, phương thức liên hệ
@@ -61,7 +61,7 @@ Thanh toán: Giao dịch qua các phương thức hỗ trợ
 
 Xem lịch sử giao dịch, doanh thu
 
-Admin
+- Admin
 Quản lý người dùng: Khoá/mở tài khoản
 
 Quản lý vé: Xem, xoá vé không phù hợp
@@ -70,8 +70,8 @@ Quản lý đánh giá và báo cáo lừa đảo
 
 Quản lý danh sách sự kiện nổi bật, thông báo
 
-III. Yêu cầu phi chức năng
-Hiệu suất
+# III. Yêu cầu phi chức năng
+- Hiệu suất
 
 Tải trang < 3 giây
 
@@ -79,7 +79,7 @@ Xử lý tìm kiếm < 1 giây
 
 Hỗ trợ 100 người dùng đồng thời
 
-Bảo mật
+- Bảo mật
 
 Mã hóa mật khẩu bằng bcrypt
 
@@ -97,7 +97,7 @@ Hỗ trợ thêm cổng thanh toán mới
 
 Mở rộng sang ứng dụng di động
 
-Giao diện người dùng
+- Giao diện người dùng
 
 Responsive (desktop/mobile)
 
@@ -105,7 +105,7 @@ Giao diện dễ sử dụng trong < 30 phút
 
 Hướng dẫn trực quan cho người dùng mới
 
-Tương thích
+- Tương thích
 
 Chrome, Firefox, Safari, Edge (trong 2 năm gần nhất)
 
@@ -129,7 +129,7 @@ Có tài liệu kỹ thuật đầy đủ
 
 Hỗ trợ rollback nhanh
 
-IV. Công nghệ sử dụng
+# IV. Công nghệ sử dụng
 Frontend: ReactJS
 
 Backend: .NET Core Web API
@@ -148,7 +148,7 @@ Quản lý mã nguồn: Git + GitHub
 
 V. Mô hình kiến trúc hệ thống
 ----
-VI. Mô hình cơ sở dữ liệu (Database Models)
+# VI. Mô hình cơ sở dữ liệu (Database Models)
 Users: ID, Tên, Email, SĐT, Mật khẩu (hash), vai trò, trạng thái
 
 Tickets: ID, tiêu đề, mô tả, giá, sự kiện, ngày, ảnh, ID người bán, trạng thái
@@ -161,7 +161,7 @@ Ratings: Người đánh giá, người được đánh giá, điểm, bình lu�
 
 Notifications: ID người dùng, nội dung, thời gian, trạng thái (đã đọc/chưa đọc)
 
-VII. Giao diện người dùng
+# VII. Giao diện người dùng
 Trang chủ: Tìm vé, xem sự kiện nổi bật
 
 Trang đăng nhập/đăng ký
