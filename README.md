@@ -4,38 +4,38 @@
 
 # I. Tổng quan dự án
 # 🎯 Mục tiêu
-Xây dựng một nền tảng số cho phép người dùng đăng bán, tìm kiếm và mua lại các vé sự kiện chưa sử dụng một cách an toàn, tiện lợi và minh bạch.
+- Xây dựng một nền tảng số cho phép người dùng đăng bán, tìm kiếm và mua lại các vé sự kiện chưa sử dụng một cách an toàn, tiện lợi và minh bạch.
 
 # 📌 Phạm vi
-Hệ thống cho phép:
+- Hệ thống cho phép:
 
-Người dùng đăng bán vé chưa dùng (concert, thể thao, lễ hội,…)
+- Người dùng đăng bán vé chưa dùng (concert, thể thao, lễ hội,…)
 
-Người mua tìm kiếm, lọc và mua vé phù hợp
+- Người mua tìm kiếm, lọc và mua vé phù hợp
 
-Cung cấp xác thực, chat, thông báo và quản lý giao dịch
+- Cung cấp xác thực, chat, thông báo và quản lý giao dịch
 
-Không tích hợp chuyển nhượng vé điện tử tự động (thực hiện bên ngoài)
+- Không tích hợp chuyển nhượng vé điện tử tự động (thực hiện bên ngoài)
 
 # 📎 Giả định và ràng buộc
-Không hỗ trợ in vé hay vận chuyển vật lý
+- Không hỗ trợ in vé hay vận chuyển vật lý
 
-Không tích hợp hệ thống vé chính thức (ticketmaster, v.v.)
+- Không tích hợp hệ thống vé chính thức (ticketmaster, v.v.)
 
-Không xử lý hoàn tiền, tranh chấp trực tiếp trên nền tảng
+- Không xử lý hoàn tiền, tranh chấp trực tiếp trên nền tảng
 
-Giao dịch thanh toán chỉ hỗ trợ một số cổng phổ biến (Momo, ZaloPay, ngân hàng)
+- Giao dịch thanh toán chỉ hỗ trợ một số cổng phổ biến (Momo, ZaloPay, ngân hàng)
 
 # II. Yêu cầu chức năng
 # 1.Các tác nhân chính
-Guest: Khách chưa đăng nhập
+- Guest: Khách chưa đăng nhập
 
-User: Người dùng đã đăng ký (người bán hoặc người mua)
+- User: Người dùng đã đăng ký (người bán hoặc người mua)
 
-Admin: Quản trị hệ thống
+- Admin: Quản trị hệ thống
 
 # 2.Chức năng chính
--Guest
+- Guest
 Tìm kiếm vé: Theo từ khóa, sự kiện, địa điểm, ngày, giá
 
 Xem chi tiết vé: Tên sự kiện, ngày giờ, vị trí ngồi, ảnh vé
@@ -44,7 +44,7 @@ Xem chi tiết vé: Tên sự kiện, ngày giờ, vị trí ngồi, ảnh vé
 
 Đăng nhập: Truy cập hệ thống
 
--User
+- User
 Xác thực tài khoản: Qua email, số điện thoại, mạng xã hội
 
 Đăng bán vé: Nhập thông tin vé, ảnh, giá, phương thức liên hệ
@@ -130,46 +130,46 @@ Có tài liệu kỹ thuật đầy đủ
 Hỗ trợ rollback nhanh
 
 # IV. Công nghệ sử dụng
-Frontend: ReactJS
+- Frontend: ReactJS
 
-Backend: .NET Core Web API
+- Backend: .NET Core Web API
 
-Database: SQL Server
+- Database: SQL Server
 
-API: RESTful API
+- API: RESTful API
 
-Authentication: JWT
+- Authentication: JWT
 
-Thông báo: Email + Push notification (OneSignal/Firebase)
+- Thông báo: Email + Push notification (OneSignal/Firebase)
 
-Triển khai: Docker + CI/CD trên GitHub Actions
+- Triển khai: Docker + CI/CD trên GitHub Actions
 
-Quản lý mã nguồn: Git + GitHub
+- Quản lý mã nguồn: Git + GitHub
 
 V. Mô hình kiến trúc hệ thống
 ----
 # VI. Mô hình cơ sở dữ liệu (Database Models)
-Users: ID, Tên, Email, SĐT, Mật khẩu (hash), vai trò, trạng thái
+- Users: ID, Tên, Email, SĐT, Mật khẩu (hash), vai trò, trạng thái
 
-Tickets: ID, tiêu đề, mô tả, giá, sự kiện, ngày, ảnh, ID người bán, trạng thái
+- Tickets: ID, tiêu đề, mô tả, giá, sự kiện, ngày, ảnh, ID người bán, trạng thái
 
-Messages: Người gửi, người nhận, nội dung, thời gian
+- Messages: Người gửi, người nhận, nội dung, thời gian
 
-Transactions: ID, ID người mua/bán, ID vé, trạng thái, phương thức thanh toán
+- Transactions: ID, ID người mua/bán, ID vé, trạng thái, phương thức thanh toán
 
-Ratings: Người đánh giá, người được đánh giá, điểm, bình luận
+- Ratings: Người đánh giá, người được đánh giá, điểm, bình luận
 
-Notifications: ID người dùng, nội dung, thời gian, trạng thái (đã đọc/chưa đọc)
+- Notifications: ID người dùng, nội dung, thời gian, trạng thái (đã đọc/chưa đọc)
 
 # VII. Giao diện người dùng
-Trang chủ: Tìm vé, xem sự kiện nổi bật
+- Trang chủ: Tìm vé, xem sự kiện nổi bật
 
-Trang đăng nhập/đăng ký
+- Trang đăng nhập/đăng ký
 
-Trang chi tiết vé: Xem thông tin, chat, đặt mua
+- Trang chi tiết vé: Xem thông tin, chat, đặt mua
 
-Trang bán vé: Giao diện nhập thông tin vé
+- Trang bán vé: Giao diện nhập thông tin vé
 
-Trang tài khoản: Thông tin cá nhân, vé đã đăng, giao dịch
+- Trang tài khoản: Thông tin cá nhân, vé đã đăng, giao dịch
 
-Trang quản trị (Admin): Quản lý người dùng, vé, đánh giá
+- Trang quản trị (Admin): Quản lý người dùng, vé, đánh giá
